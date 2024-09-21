@@ -7,11 +7,31 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public bool gameHasEnded = false;
+    public bool gameHasReplayed = false;
     public float restartDelay = 1f;
     public GameObject completeLevelUI;
     private void Start()
     {
         instance = this;
+        //First shot
+        if (!InputHandler._isRecording && !InputHandler._isReplaying)
+        {
+            FindObjectOfType<InputHandler>().StartRecording();
+        } 
+        else if (InputHandler._isRecording)
+        {
+            FindObjectOfType<InputHandler>().StopRecording();
+            FindObjectOfType<InputHandler>().StartReplay();
+        }
+        else if (InputHandler._isReplaying)
+        {
+            FindObjectOfType<InputHandler>().StartRecording();
+        }
+        else
+        {
+            FindObjectOfType<InputHandler>().StartRecording();
+        }
+        Debug.Log("isRecording: " + InputHandler._isRecording.ToString() + "\nisReplaying: " + InputHandler._isReplaying.ToString());
     }
     public void EndGame()
     {
@@ -27,8 +47,8 @@ public class GameManager : MonoBehaviour
     {
         completeLevelUI.SetActive(true);
     }
-    void Restart()
+    public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -118,8 +118,7 @@ GameObject:
   - component: {fileID: 3827812305057938065}
   - component: {fileID: 7299073328081788019}
   - component: {fileID: 4682958306735772472}
-  - component: {fileID: 8909677311916435212}
-  - component: {fileID: 7014542070554189145}
+  - component: {fileID: 5429799778176674575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -243,7 +242,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &8909677311916435212
+--- !u!114 &5429799778176674575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,28 +251,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5097687940385938634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b692ee7d369b65e42b0ba20e846bb001, type: 3}
+  m_Script: {fileID: 11500000, guid: 7eef0622d4d742c46a3281c921853201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 4682958306735772472}
-  pc: {fileID: 7014542070554189145}
-  forwardForce: 4000
-  sideForce: 70
---- !u!114 &7014542070554189145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097687940385938634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05fab1d5be7331c4992bab1a5d4a4a55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement: {fileID: 8909677311916435212}
-  dieTorque: {x: 360, y: 32, z: 231}
-  dieForce: {x: 0, y: 5, z: 0}
 --- !u!1 &6766279298339457915
 GameObject:
   m_ObjectHideFlags: 0
